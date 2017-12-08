@@ -6,7 +6,7 @@
  	.thumb_func
 
 @ EE2024 Assignment 1, Sem 1, AY 2017/18
-@ (c) CK Tham, ECE NUS, 2017
+@ (c) Siidheesh Theivasigamani 2017
 
 @R0: T
 @R1: dij
@@ -29,7 +29,7 @@ distrBF:
 	mov r6, #0					@ Ti = 0
 	loopStep:					@ loop through steps
 		mov r7, #0				@ j = 0
-		mov r10, #0x7fffffff	@ set to largest signed 32-bit value as starting minimum
+		ldr r10, =#0x7fffffff	@ set to largest signed 32-bit value as starting minimum
 		loopNode:				@ loop through nodes
 			mov r5, r1			@ set R5 to dij
 			bl RETRIEVE			@ set R8 to dij[Ti][j]
